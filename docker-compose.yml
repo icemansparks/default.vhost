@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+    apache:
+        image: php:7.2-apache
+        volumes:
+            - ./shop:/var/www/html/
+
+networks:
+    default:
+        external:
+            name: frontproxy_default
